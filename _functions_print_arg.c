@@ -30,3 +30,24 @@ int print_string(va_list args)
 	return (i);
 }
 
+/**
+ * print_decimal - Fonction pour gérer le spécificateur %d (decimal)
+ * @args: list of argument to print
+ * Return: number of parameters printed
+ */
+int print_decimal(va_list args)
+{
+	_putchar ('0' + va_arg(args, int) % 10);
+	return (1);
+}
+
+/**
+ * print_i_decimal - Fonction pour gérer le spécificateur %d (decimal)
+ * @args: list of argument to print
+ * Return: number of parameters printed
+ */
+int print_i_decimal(va_list args)
+{
+	_putchar ('0' + va_arg(args, int) % 10);
+	return (1);
+}

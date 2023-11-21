@@ -13,12 +13,12 @@ int _printf(const char *format, ...)
 	int i, j, count = 0, fonction_trouvee = 0;
 
 	TypeDef_CodeFormat_Fonction CodeFormat_Fonction[] = {
-		{"c", print_char},
-		{"s", print_string},
-		{"d", print_decimal},
-		{"i", print_i_decimal},
+		{"c", print_char}, {"s", print_string},
+		{"d", print_decimal}, {"i", print_i_decimal},
 		{NULL, NULL}
 	};
+	if (format == NULL)
+	return (-1);
 	va_start(args, format);
 	for (i = 0; format[i] != 0; i++)
 	{
