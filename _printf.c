@@ -15,6 +15,8 @@ int _printf(const char *format, ...)
 	TypeDef_CodeFormat_Fonction CodeFormat_Fonction[] = {
 		{"c", print_char},
 		{"s", print_string},
+		{"d", print_decimal},
+		{"i", print_i_decimal},
 		{NULL, NULL}
 	};
 	va_start(args, format);
