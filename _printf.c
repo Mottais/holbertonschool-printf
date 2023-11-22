@@ -12,10 +12,8 @@ int _printf(const char *format, ...)
 va_list args;
 int i, j, count = 0, decal;
 TypeDef_CodeFormat_Fonction CodeFormat_Fonction[] = {
-	{"c", print_char},
-	{"s", print_string},
-	{"d", print_decimal}, {"i", print_i_decimal},
-	{"%", print_unknown}, {NULL, NULL}
+	{"c", print_char}, {"s", print_string},	{"d", print_decimal},
+	{"i", print_i_decimal},	{"%", print_unknown}, {NULL, NULL}
 };
 
 if (format == NULL)
@@ -44,6 +42,8 @@ for (i = 0; format[i] != 0; i++)
 			count = count + _putchar(format[i + decal]);
 		}
 	}
+	else if (format[i] == '%' && format[i + 1] == '\0')
+		count = -1;
 	else
 		count = count + _putchar(format[i]);
 }

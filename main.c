@@ -14,15 +14,13 @@ int main(void)
 	int len;
 	int len2;
 
-	len = _printf("Percent:[%%]\n");
-	len2 = printf("Percent:[%%]\n");
-	printf("Length:[%d, %i]\n", len, len);
-	printf("Length:[%d, %i]\n", len2, len2);
+	len2 = printf("test 1 : %r\n");
+	len = _printf("test 1 : %r\n");
+	printf("Length:[%d, %d]\n\n", len2, len);
 
-	len = _printf("Unknown:[%r]\n");
-	len2 = printf("Unknown:[%r]\n");
-	printf("Length:[%d, %i]\n", len, len);
-	printf("Length:[%d, %i]\n", len2, len2);
+	len2 = printf("test 2 : % s\n", "ABCDE");
+	len = _printf("test 2 : % s\n", "ABCDE");
+	printf("Length:[%d, %d]\n\n", len2, len);	
 
-	return (0);
+return (0);
 }
