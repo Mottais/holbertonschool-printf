@@ -24,7 +24,7 @@ int print_string(va_list args)
 
 	if (string == 0)
 	string = "(null)";
-	
+
 	while (string[i] != '\0')
 	{
 		_putchar(string[i]);
@@ -35,15 +35,15 @@ int print_string(va_list args)
 
 /**
  * print_unknown - Fonction pour gérer le spécificateur inconnu
- * (imprime le caractère tel quel)	
+ * (imprime le caractère tel quel)
  * @args: list of argument to print
  * Return: number of parameters printed
  */
-int print_unknown(va_list args) 
+int print_unknown(va_list args)
 {
-    (void)(args);
-    _putchar('%');
-    return (1);
+	(void)(args);
+	_putchar('%');
+	return (1);
 }
 
 /**
