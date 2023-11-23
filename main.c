@@ -12,15 +12,54 @@ int main(void)
 {
 
 	int len;
-	int len2;
 
-	len2 = printf("test 1 : %r\n");
-	len = _printf("test 1 : %r\n");
-	printf("Length:[%d, %d]\n\n", len2, len);
+len = _printf("Let's try to printf a simple sentence.\n");
+printf ("return : %d\n\n", len);
 
-	len2 = printf("test 2 : % s\n", "ABCDE");
-	len = _printf("test 2 : % s\n", "ABCDE");
-	printf("Length:[%d, %d]\n\n", len2, len);	
+len = _printf(NULL);
+_printf ("return sting forma = NULL : %d\n\n", len);
 
-return (0);
+len = _printf("Percent:[%%]\n");
+_printf ("return : %d\n\n", len);
+
+len = _printf("Unknown:[%r]\n");
+_printf ("return : %d\n\n", len);
+
+len = _printf("Percent:[%%%]\n");
+_printf ("return : %d\n\n", len);
+
+len = _printf("Percent:[%%%%]\n");
+_printf ("return : %d\n\n", len);
+
+len = _printf("One Percent at the end %");
+_printf ("return : %d\n\n", len);
+
+len = _printf("Character: [%c]\n", 'H');
+_printf ("return : %d\n\n", len);
+
+len = _printf("Character NULL : [%c]\n", NULL);
+_printf ("return : %d\n\n", len);
+
+len = _printf("String:[%s]\n", "I am a string !");
+_printf ("return : %d\n\n", len);
+
+len = _printf("String:[% s]\n", "I am a string !");
+_printf ("return : %d\n\n", len);
+
+len = _printf("String NULL:[%s]\n", NULL);
+_printf ("return : %d\n\n", len);
+
+len = _printf("Positive:[%d]\n", 762534);
+_printf ("return : %d\n\n", len);
+
+len = _printf("Zero:[%d]\n", -0);
+_printf ("return : %d\n\n", len);
+
+len = _printf("Negative:[%d]\n", -762534);
+_printf ("return : %d\n\n", len);
+
+len = _printf("Combinaison Car[%c]  String[%s]  int[%d]\n", 'X', "ABCDEF", -762534);
+_printf ("return : %d\n\n", len);
+
+	return (0);
 }

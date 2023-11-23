@@ -53,17 +53,36 @@ int print_unknown(va_list args)
  */
 int print_decimal(va_list args)
 {
-	_putchar ('0' + va_arg(args, int) % 10);
-	return (1);
-}
+	int i = 0, signe = 1, count = 0;
+	int buff[10];
+	int n = va_arg(args, int);
 
-/**
- * print_i_decimal - Fonction pour gérer le spécificateur %d (decimal)
- * @args: list of argument to print
- * Return: number of parameters printed
- */
-int print_i_decimal(va_list args)
-{
-	_putchar ('0' + va_arg(args, int) % 10);
-	return (1);
+
+
+	if (n < INT_MIN || INT_MAX < n)
+	return (-1);
+
+	/* imprime '-' si n négatif */
+	if (n < 0)
+	{
+	signe = -1;
+	count += _putchar('-');
 	}
+
+	/* mémorise chaque digit de n (base) dans un tableau */
+	for (i = 0; n ; i++)
+	{
+	buff[i] = n % 10;
+	n /= 10;
+	}
+
+
+	/* imprime les tous digits du tableau souf l'unité*/
+	for (i--; i > 0 ; i--)
+		count += _putchar('0' + buff[i] * signe);
+
+	count += _putchar('0' + buff[0] * signe);
+
+	return (count);
+
+}

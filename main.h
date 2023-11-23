@@ -1,5 +1,9 @@
 #ifndef _EXISTE_DEJA_
 #define _EXISTE_DEJA_
+#include <stdarg.h>
+#include <stdio.h>
+#include <unistd.h>
+#include <limits.h>
 /**
  * struct CodeFormat_Fonction - CodeFormat-->NameFonction
  *
