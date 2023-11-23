@@ -8,21 +8,20 @@
 int main(void)
 {
 
-	int len;
-	unsigned int ui;
+int len;
 
 	
-ui = (unsigned int)INT_MAX + 1 * 1024;
-len = _printf("%o", ui);
+
+len = _printf("%x", 16);
+printf ("\nreturn : %d\n", len);
+
+len = _printf("%x", UINT_MAX);
 printf ("\nreturn : %d\n\n", len);
 
-len = _printf("%o", UINT_MAX);
+len = _printf("%x", 15);
 printf ("\nreturn : %d\n\n", len);
 
-len = _printf("%o", 8);
-printf ("\nreturn : %d\n\n", len);
-
-len = _printf("%o", 0);
+len = _printf("%x", 0);
 printf ("\nreturn : %d\n\n", len);
 
 len = _printf("Let's try to printf a simple sentence.\n");
