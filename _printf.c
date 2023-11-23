@@ -13,7 +13,7 @@ TypeDef_CodeFormat_Fonction Tab[] = {
 	{"s", print_string},
 	{"d", print_decimal}, {"i", print_decimal},
 	{"%", print_unknown},
-	{"b", Dec_to_Bin},
+	{"b", Dec_to_Bin}, {"u", Unsigned},
 	{NULL, NULL}
 };
 
