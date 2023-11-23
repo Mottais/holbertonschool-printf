@@ -3,13 +3,13 @@
 /**
  * struct CodeFormat_Fonction - CodeFormat-->NameFonction
  *
- * @Code_Format: The code of format
- * @Pointeur_Fonction_Print: The function associated
+ * @Spe: The code of format
+ * @Func: The function associated
  */
 typedef struct CodeFormat_Fonction
 {
-	char *Code_Format;
-	int (*Pointeur_Fonction_Print)();
+	char *Spe;
+	int (*Func)(va_list);
 } TypeDef_CodeFormat_Fonction;
 
 int _putchar(char c);
