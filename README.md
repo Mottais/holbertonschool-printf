@@ -12,7 +12,9 @@ The printf() function **formats and prints a series of characters and values to 
 Here are some examples of basic uses of printf:
 
 >printf ("Characters: %c %c \n",  'z',  80); **Output-->** Characters: z P
+
 >printf ("%s \n",  "Educative"); **Output-->** Educative
+
 >printf ("Integers: %i %u \n",  -3456,  3456); **Output-->** Integers: -3456 3456
 
 
