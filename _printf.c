@@ -17,7 +17,7 @@ TypeDef_CodeFormat_Fonction Tab[] = {
 	{"d", print_decimal},
 	{"i", print_i_decimal},
 	{"%", print_unknown}, {NULL, NULL}
-	};
+};
 
 if (format == NULL)
 return (-1);
