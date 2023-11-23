@@ -30,14 +30,14 @@ for (i = 0; format[i] != 0; i++)     /* boucle sur les caracteres de 'format'*/
 			decal = 1;
 		i = i + 1 + decal; /* Passer le caractère '%' et l'éventuel [espace] */
 		j = 0;
-		for (j = 0; Tab[j].Code_Format != 0; j++)  /* boucle sur spé */
+		for (j = 0; Tab[j].Spe != 0; j++)  /* boucle sur spé */
 		{
-			if (format[i] == *Tab[j].Code_Format)
-			{	count  = count + Tab[j].Pointeur_Fonction_Print(args);
+			if (format[i] == *Tab[j].Spe)
+			{	count  = count + Tab[j].Func(args);
 				break;
 			}
 		}
-		if (Tab[j].Code_Format == 0)
+		if (Tab[j].Spe == 0)
 		{	count = count + _putchar(format[i + decal - 1]);
 			count = count + _putchar(format[i + decal]);
 		}
