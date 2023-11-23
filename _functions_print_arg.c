@@ -1,6 +1,3 @@
-#include <stdarg.h>
-#include <stdio.h>
-#include <unistd.h>
 #include "main.h"
 /**
  * print_char - Fonction pour gérer le spécificateur %c (caratere)

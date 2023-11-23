@@ -11,9 +11,10 @@ int i, j, count = 0, decal;
 TypeDef_CodeFormat_Fonction Tab[] = {
 	{"c", print_char},
 	{"s", print_string},
-	{"d", print_decimal},
-	{"i", print_decimal},
-	{"%", print_unknown}, {NULL, NULL}
+	{"d", print_decimal}, {"i", print_decimal},
+	{"%", print_unknown},
+	{"b", Dec_to_Bin},
+	{NULL, NULL}
 };
 
 if (format == NULL)
@@ -26,7 +27,6 @@ for (i = 0; format[i] != 0; i++)     /* boucle sur les caracteres de 'format'*/
 		if (format[i + 1] == ' ')
 			decal = 1;
 		i = i + 1 + decal; /* Passer le caractère '%' et l'éventuel [espace] */
-		j = 0;
 		for (j = 0; Tab[j].Spe != 0; j++)  /* boucle sur spé */
 		{
 			if (format[i] == *Tab[j].Spe)
