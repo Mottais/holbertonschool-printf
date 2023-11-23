@@ -1,6 +1,3 @@
-#include <stdarg.h>
-#include <stdio.h>
-#include <unistd.h>
 #include "main.h"
 /**
  * _printf - My function printf
@@ -15,7 +12,7 @@ TypeDef_CodeFormat_Fonction Tab[] = {
 	{"c", print_char},
 	{"s", print_string},
 	{"d", print_decimal},
-	{"i", print_i_decimal},
+	{"i", print_decimal},
 	{"%", print_unknown}, {NULL, NULL}
 };
 
