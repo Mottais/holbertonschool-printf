@@ -12,16 +12,16 @@ int len;
 
 	
 
-len = _printf("%x", 16);
+len = _printf("%X", 16);
 printf ("\nreturn : %d\n", len);
 
-len = _printf("%x", UINT_MAX);
+len = _printf("%X", UINT_MAX);
 printf ("\nreturn : %d\n\n", len);
 
-len = _printf("%x", 15);
+len = _printf("%X", 15);
 printf ("\nreturn : %d\n\n", len);
 
-len = _printf("%x", 0);
+len = _printf("%X", 0);
 printf ("\nreturn : %d\n\n", len);
 
 len = _printf("Let's try to printf a simple sentence.\n");

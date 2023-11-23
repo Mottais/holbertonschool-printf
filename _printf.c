@@ -11,9 +11,9 @@ int i, j, count = 0, decal;
 TypeDef_CodeFormat_Fonction Tab[] = {
 	{"c", print_char},
 	{"s", print_string},
-	{"d", print_decimal}, {"i", print_decimal},
+	{"d", print_decimal}, {"i", print_decimal}, {"u", Unsigned},
 	{"%", print_unknown},
-	{"b", Dec_to_Bin}, {"u", Unsigned}, {"o", Dec_to_Oct}, {"x", Dec_to_hex},
+	{"b", Dec_to_Bin}, {"o", Dec_to_Oct}, {"x", Dec_to_hex}, {"X", Dec_to_HEX},
 	{NULL, NULL}
 };
 
