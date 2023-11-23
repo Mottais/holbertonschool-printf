@@ -1,6 +1,3 @@
-#include <stdarg.h>
-#include <stdio.h>
-#include <unistd.h>
 #include "main.h"
 
 /**
@@ -12,6 +9,18 @@ int main(void)
 {
 
 	int len;
+	unsigned int ui;
+
+	
+ui = (unsigned int)INT_MAX + 1024;
+len = _printf("%b\n", ui);
+printf ("return : %d\n\n", len);
+
+len = _printf("%b\n", UINT_MAX);
+printf ("return : %d\n\n", len);
+
+len = _printf("%b\n", 98);
+printf ("return : %d\n\n", len);
 
 len = _printf("Let's try to printf a simple sentence.\n");
 printf ("return : %d\n\n", len);
