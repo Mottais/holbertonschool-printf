@@ -13,16 +13,16 @@ int main(void)
 
 	
 ui = (unsigned int)INT_MAX + 1 * 1024;
-len = _printf("%u", ui);
+len = _printf("%o", ui);
 printf ("\nreturn : %d\n\n", len);
 
-len = _printf("%u", UINT_MAX);
+len = _printf("%o", UINT_MAX);
 printf ("\nreturn : %d\n\n", len);
 
-len = _printf("%u", 8);
+len = _printf("%o", 8);
 printf ("\nreturn : %d\n\n", len);
 
-len = _printf("%u", 0);
+len = _printf("%o", 0);
 printf ("\nreturn : %d\n\n", len);
 
 len = _printf("Let's try to printf a simple sentence.\n");
