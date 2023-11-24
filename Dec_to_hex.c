@@ -1,10 +1,10 @@
 #include "main.h"
 /**
- * Dec_to_HEX - Fonction print unsigned int argument converted to HEX (%X)
+ * Dec_to_hex - Fonction print unsigned int argument converted to HEX (%X)
  * @args: list of argument to print
  * Return: number of parameters printed
  */
-int Dec_to_HEX(va_list args)
+int Dec_to_hex(va_list args)
 {
 
 	int i = 0, count = 0;
@@ -29,7 +29,7 @@ int Dec_to_HEX(va_list args)
 		if (buff[i] <= 9)
 			count += _putchar('0' + buff[i]);
 		else
-			count += _putchar('A' + buff[i] - 10);
+			count += _putchar('a' + buff[i] - 10);
 	}
 
 	return (count);
