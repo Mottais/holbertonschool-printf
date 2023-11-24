@@ -33,7 +33,7 @@ _printf ("return sting forma = NULL : %d\n\n", len);
 len = _printf("Percent:[%%]\n");
 _printf ("return : %d\n\n", len);
 
-len = _printf("Unknown:[%r]\n");
+len = _printf("ABCDEF <-->[%r]\n", "ABCDEF");
 _printf ("return : %d\n\n", len);
 
 len = _printf("Percent:[%%%]\n");

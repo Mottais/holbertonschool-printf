@@ -29,5 +29,6 @@ int Unsigned(va_list args);
 int Dec_to_Oct(va_list args);
 int Dec_to_hex(va_list args);
 int Dec_to_HEX(va_list args);
+int rev_str(va_list args);
 
 #endif
