@@ -72,5 +72,7 @@ _printf ("return : %d\n\n", len);
 len = _printf("Combinaison Car[%c]  String[%s]  int[%d]\n", 'X', "ABCDEF", -762534);
 _printf ("return : %d\n\n", len);
 
+len = _printf("ABCDEF -->ROT13-->[%R]\n", "ABCDEF");
+
 	return (0);
 }
