@@ -1,6 +1,3 @@
-#include <stdarg.h>
-#include <stdio.h>
-#include <unistd.h>
 #include "main.h"
 /**
  * print_char - Fonction pour gérer le spécificateur %c (caratere)
@@ -69,19 +66,18 @@ int print_decimal(va_list args)
 	count += _putchar('-');
 	}
 
-	/* mémorise chaque digit de n (base) dans un tableau */
-	for (i = 0; n ; i++)
-	{
+	/* mémorise chaque digit de n (base 10) dans un tableau */
+	do {
 	buff[i] = n % 10;
 	n /= 10;
-	}
+	i++;
+	} while (n);
 
 
-	/* imprime les tous digits du tableau souf l'unité*/
-	for (i--; i > 0 ; i--)
+	/* imprime les digits du tableau */
+	for (i--; i >= 0 ; i--)
 		count += _putchar('0' + buff[i] * signe);
 
-	count += _putchar('0' + buff[0] * signe);
 
 	return (count);
 

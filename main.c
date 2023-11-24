@@ -1,6 +1,3 @@
-#include <stdarg.h>
-#include <stdio.h>
-#include <unistd.h>
 #include "main.h"
 
 /**
@@ -11,7 +8,21 @@
 int main(void)
 {
 
-	int len;
+int len;
+
+	
+
+len = _printf("%X", 16);
+printf ("\nreturn : %d\n", len);
+
+len = _printf("%X", UINT_MAX);
+printf ("\nreturn : %d\n\n", len);
+
+len = _printf("%X", 15);
+printf ("\nreturn : %d\n\n", len);
+
+len = _printf("%X", 0);
+printf ("\nreturn : %d\n\n", len);
 
 len = _printf("Let's try to printf a simple sentence.\n");
 printf ("return : %d\n\n", len);
