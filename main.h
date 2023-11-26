@@ -31,5 +31,6 @@ int Dec_to_hex(va_list args);
 int Dec_to_HEX(va_list args);
 int rev_str(va_list args);
 int ROT13(va_list args);
+int print_addr(va_list args);
 
 #endif

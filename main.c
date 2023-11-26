@@ -9,9 +9,12 @@ int main(void)
 {
 
 int len;
+void *addr;
+addr = (void *)0x7ffe637541f0;
 
-	
-
+len = _printf("Address:[%p]", addr);
+printf ("\nreturn : %d\n", len);	
+/*
 len = _printf("%X", 16);
 printf ("\nreturn : %d\n", len);
 
@@ -73,6 +76,6 @@ len = _printf("Combinaison Car[%c]  String[%s]  int[%d]\n", 'X', "ABCDEF", -7625
 _printf ("return : %d\n\n", len);
 
 len = _printf("ABCDEF -->ROT13-->[%R]\n", "ABCDEF");
-
-	return (0);
+*/
+return (0);
 }
