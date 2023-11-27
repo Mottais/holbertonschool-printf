@@ -14,7 +14,7 @@ int rev_str(va_list args)
 		len++;
 
 	for (i = len - 1; i >= 0; i--)
-		counti += _putchar(string[i]);
+		count += _putchar(string[i]);
 
 	return (count);
 }
